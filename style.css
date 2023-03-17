@@ -1,0 +1,12 @@
+* {
+   font-family: sans-serif;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+body {
+   background: rgb(0, 102, 255);
+}

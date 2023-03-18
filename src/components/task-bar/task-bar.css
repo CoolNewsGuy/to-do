@@ -1,0 +1,12 @@
+.task-bar {
+   position: relative;
+   top: 30px;
+   left: 30px;
+   padding: 13px 15px;
+   width: 300px;
+   border-radius: 5px;
+}
+
+.task-bar:focus {
+   outline-color: rgb(0, 174, 255);
+}

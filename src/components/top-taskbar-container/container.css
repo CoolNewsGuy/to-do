@@ -1,4 +1,6 @@
 .top-container {
    position: relative;
    top: 30px;
+   display: flex;
+   justify-content: space-around;
 }

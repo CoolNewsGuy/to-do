@@ -1,4 +1,5 @@
 import "./container.css";
+import AddTaskBtn from "../add-task-btn/add-task-btn";
 import TaskBar from "./task-bar/task-bar";
 
 let TopContainer = (() => {
@@ -9,6 +10,6 @@ let TopContainer = (() => {
 	return container;
 })();
 
-TopContainer.appendChild(TaskBar());
+TopContainer.append(TaskBar(), AddTaskBtn());
 
 export default TopContainer;

@@ -8,4 +8,13 @@ function Task() {
 	return taskDiv;
 }
 
+function TaskText(text) {
+	let taskP = document.createElement("p");
+
+	taskP.classList.add("task-text");
+	taskP.textContent = text;
+
+	return taskP;
+}
+
 export default Task;

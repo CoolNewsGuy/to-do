@@ -1,0 +1,9 @@
+.trash-container {
+   background: #07f;
+   display: grid;
+   place-content: center;
+   padding: 8px;
+   border-radius: 5px;
+   border: 2px solid #07f;
+   transition: 0.2s;
+}

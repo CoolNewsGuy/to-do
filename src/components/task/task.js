@@ -27,6 +27,11 @@ function TaskDeleteIcon() {
    iconContainer.data = TrashHTML;
    iconContainer.type = "image/svg+xml";
 
+   // change cursor to pointer when hovering inside the object tag
+   iconContainer.onload = () => {
+      iconContainer.contentDocument.querySelector("*").style.cursor = "pointer";
+   };
+
    // for hover effect
    function changeIconStrokeColor(color) {
       const trashIcon = iconContainer.contentDocument.querySelector("svg path");

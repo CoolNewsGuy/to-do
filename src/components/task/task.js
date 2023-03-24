@@ -31,20 +31,17 @@ function TaskDeleteIcon() {
 
    iconContainer.append(trashImg);
 
-   let TrashColor = (() => {
-      function changeToBlue() {
+   let trashColor = {
+      changeToBlue() {
          trashImg.src = BlueTrash;
-      }
-
-      function changeToWhite() {
+      },
+      changeToWhite() {
          trashImg.src = WhiteTrash;
-      }
+      },
+   };
 
-      return { changeToBlue, changeToWhite };
-   })();
-
-   iconContainer.onmouseover = TrashColor.changeToBlue;
-   iconContainer.onmouseleave = TrashColor.changeToWhite;
+   iconContainer.onmouseover = trashColor.changeToBlue;
+   iconContainer.onmouseleave = trashColor.changeToWhite;
 
    return iconContainer;
 }

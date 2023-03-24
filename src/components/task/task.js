@@ -1,6 +1,7 @@
 import "./task.css";
 import "./trash.css";
-import TrashHTML from "../../assets/trash.svg";
+import WhiteTrash from "../../assets/white-trash.svg";
+import BlueTrash from "../../assets/blue-trash.svg";
 
 function Task() {
    let taskDiv = document.createElement("div");
@@ -22,29 +23,16 @@ function TaskText(text) {
 
 function TaskDeleteIcon() {
    // will be used to help us change the color of trash when hovering
-   let iconContainer = document.createElement("object");
+   let iconContainer = document.createElement("div");
    iconContainer.classList.add("trash-container");
-   iconContainer.data = TrashHTML;
-   iconContainer.type = "image/svg+xml";
 
-   // change cursor to pointer when hovering inside the object tag
-   iconContainer.onload = () => {
-      iconContainer.contentDocument.querySelector("*").style.cursor = "pointer";
-   };
+   function changeTrashColor(trashColor) {
+      let TrashImg = new Image();
 
-   // for hover effect
-   function changeIconStrokeColor(color) {
-      const trashIcon = iconContainer.contentDocument.querySelector("svg path");
-      trashIcon.setAttribute("stroke", color);
+      TrashImg.src = trashColor;
+
+      return TrashImg;
    }
-
-   iconContainer.addEventListener("mouseover", () => {
-      changeIconStrokeColor("#07f");
-   });
-
-   iconContainer.addEventListener("mouseleave", () => {
-      changeIconStrokeColor("#fff");
-   });
 
    return iconContainer;
 }

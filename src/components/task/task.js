@@ -26,13 +26,25 @@ function TaskDeleteIcon() {
    let iconContainer = document.createElement("div");
    iconContainer.classList.add("trash-container");
 
-   function changeTrashColor(trashColor) {
-      let TrashImg = new Image();
+   let trashImg = new Image();
+   trashImg.src = WhiteTrash;
 
-      TrashImg.src = trashColor;
+   iconContainer.append(trashImg);
 
-      return TrashImg;
-   }
+   let TrashColor = (() => {
+      function changeToBlue() {
+         trashImg.src = BlueTrash;
+      }
+
+      function changeToWhite() {
+         trashImg.src = WhiteTrash;
+      }
+
+      return { changeToBlue, changeToWhite };
+   })();
+
+   iconContainer.onmouseover = TrashColor.changeToBlue;
+   iconContainer.onmouseleave = TrashColor.changeToWhite;
 
    return iconContainer;
 }

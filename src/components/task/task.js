@@ -28,10 +28,12 @@ function TaskDeleteIcon() {
 
    let trashImg = new Image();
    trashImg.src = WhiteTrash;
+   trashImg.classList.add("trash-icon");
 
    iconContainer.append(trashImg);
    iconContainer.onmouseover = () => (trashImg.src = BlueTrash);
    iconContainer.onmouseleave = () => (trashImg.src = WhiteTrash);
+   iconContainer.onclick = (e) => e.target.closest(".task").remove();
 
    return iconContainer;
 }

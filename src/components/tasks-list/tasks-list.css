@@ -1,8 +1,11 @@
 .tasks-list {
    position: relative;
    top: 100px;
+   background: #fff;
+   border-radius: 10px;
+   padding-bottom: 10px;
 }
 
-.tasks-list > * {
+.tasks-list > *:not(:last-child) {
    margin-bottom: 10px;
 }

@@ -3,11 +3,11 @@ import "./trash.css";
 import WhiteTrash from "../../assets/white-trash.svg";
 import BlueTrash from "../../assets/blue-trash.svg";
 
-function Task() {
+function Task(text) {
    let taskDiv = document.createElement("div");
 
    taskDiv.classList.add("task");
-   taskDiv.append(TaskText("Hello world"), TaskDeleteIcon());
+   taskDiv.append(TaskText(text), TaskDeleteIcon());
 
    return taskDiv;
 }
